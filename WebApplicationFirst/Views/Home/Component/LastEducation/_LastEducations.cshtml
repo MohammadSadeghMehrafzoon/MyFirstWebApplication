@@ -1,0 +1,32 @@
+﻿
+
+@model List<LastEducation>
+
+
+
+    	<section class="latest-blog-section p-3 p-lg-5">
+			<div class="container">
+				<h2 class="section-title font-weight-bold mb-5">آخرین دوره ها</h2>
+				<div class="row">
+					@foreach (var LastEducation in Model)
+					{
+						
+						<div class="col-md-4 mb-5">
+						<div class="card blog-post-card">
+							<img class="card-img-top" src="~/assets/images/blog/@LastEducation.Image" alt="image">
+							<div class="card-body">
+								<h5 class="card-title"> @LastEducation.Titel </h5>
+
+								<p class="card-text">  @LastEducation.Description</p>
+
+								<p class="mb-0"><a class="more-link" href="@LastEducation.Link" target="_blank">خرید دوره</a></p>
+
+							</div>
+						</div>
+					</div>
+					}
+					
+					
+				</div>
+			</div>
+		</section>
