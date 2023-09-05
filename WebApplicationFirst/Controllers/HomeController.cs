@@ -18,14 +18,20 @@ namespace WebApplicationFirst.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
+        
+        // Contact Action
+        
+        [HttpGet]
         public IActionResult Contact() 
         { 
             return View(); 
+        }
+
+        [HttpPost]
+        public JsonResult Contact(IFormCollection form)
+        {
+            
+            return Json(Ok());
         }
 
 
