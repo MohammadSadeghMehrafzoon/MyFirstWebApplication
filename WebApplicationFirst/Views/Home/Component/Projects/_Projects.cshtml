@@ -16,7 +16,11 @@
 								<div class="col-lg-8">
 									<div class="card-body">
 										<h5 class="card-title">
-											@project.Name</h5>
+
+											<a asp-controller ="Home" asp-action="ProjectsDetails" asp-route-id ="@project.Id" class="theme-link" >
+                                                 @project.Name
+											</a>
+											</h5>
 
 										<p class="card-text">
 											@project.Description

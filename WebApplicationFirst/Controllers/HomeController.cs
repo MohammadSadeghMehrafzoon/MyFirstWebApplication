@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using WebApplicationFirst.Data;
 using WebApplicationFirst.Models;
 
 namespace WebApplicationFirst.Controllers
@@ -16,6 +17,12 @@ namespace WebApplicationFirst.Controllers
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult ProjectsDetails(int id) {
+
+            var project = ProjectStore.GetProjectBy(id);
+            return View(project);
         }
 
         

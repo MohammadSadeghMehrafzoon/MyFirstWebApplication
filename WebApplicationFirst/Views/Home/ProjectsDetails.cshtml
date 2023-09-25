@@ -1,0 +1,61 @@
+﻿@model Projects
+
+@{
+    ViewData["Title"] = "ProjectsDetails";
+}
+<section class="cta-section theme-bg-light py-5">
+			<div class="container text-center single-col-max-width">
+				<h2 class="heading">ارتباط با ما</h2>
+				<div class="intro">
+					
+					<p>از طریق شبکه های اجتماعی با ما در ارتباط باشید</p>
+					<ul class="list-inline mb-0">
+						<li class="list-inline-item mb-3"><a class="twitter" href="#"><i
+									class="fab fa-twitter fa-fw fa-lg"></i></a></li>
+
+						<li class="list-inline-item mb-3"><a class="linkedin" href="#"><i
+									class="fab fa-linkedin-in fa-fw fa-lg"></i></a></li>
+						<li class="list-inline-item mb-3"><a class="github" href="#"><i
+									class="fab fa-github-alt fa-fw fa-lg"></i></a></li>
+						<li class="list-inline-item"><a class="instagram" href="#"><i
+									class="fab fa-instagram fa-fw fa-lg"></i></a></li>
+						<li class="list-inline-item mb-3"><a class="stack-overflow" href="#"><i
+									class="fab fa-stack-overflow fa-fw fa-lg"></i></a></li>
+						<li class="list-inline-item mb-3"><a class="medium" href="#"><i
+									class="fab fa-medium-m fa-fw fa-lg"></i></a></li>
+						<li class="list-inline-item mb-3"><a class="codepen" href="#"><i
+									class="fab fa-codepen fa-fw fa-lg"></i></a></li>
+					</ul>
+				</div>
+
+				</div>
+		</section>
+
+		<section class="contact-section px-3 py-5 p-md-5">
+    <div class="container">
+
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <td>شماره</td>
+                <td>عکس</td>
+                <td>نام پروژه</td>
+                <td>توضیحات</td>
+                <td>آدرس</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>@Model.Id</td>
+                <td><img src="~/assets/images/project/@Model.Image" width="100px"/></td>
+                <td>@Model.Name</td>
+                <td>@Model.Description</td>
+                <td> @Model.Link</td>
+            </tr>
+            </tbody>
+
+        </table>
+
+    </div>
+</section>
+
